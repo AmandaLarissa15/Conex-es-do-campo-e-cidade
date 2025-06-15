@@ -1,0 +1,97 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  background: linear-gradient(135deg, #a0c4ff 0%, #90be6d 100%);
+  color: #023047;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #023047;
+  border-right: 3px solid #023047;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 28ch;
+  animation: typing 3.5s steps(28) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0; }
+  to { width: 28ch; }
+}
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+main {
+  max-width: 960px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.painel {
+  width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(2, 48, 71, 0.3);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.painel h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.svg-container {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+.descricao {
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.campo {
+  background-color: #90be6d;
+  color: #023047;
+}
+.cidade {
+  background-color: #61a5c2;
+  color: #f0f9ff;
+}
+.cidade .descricao {
+  color: #dbe9f4;
+}
+
+/* Responsivo */
+@media (max-width: 700px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .painel {
+    width: 90%;
+    max-width: 350px;
+  }
+}
