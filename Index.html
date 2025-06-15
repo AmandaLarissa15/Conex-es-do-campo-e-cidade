@@ -3,63 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Raízes Conectadas - Campo e Cidade</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Raízes Conectadas - Do campo à cidade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway&family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Conectando vidas... culturas... saberes...</h1>
+  <header role="banner">
+    <h1 aria-label="Conectando vidas, culturas e saberes">Conectando vidas... culturas... saberes...</h1>
+    <p>Raízes Conectadas - Do campo à cidade</p>
+    <button class="btn-explorar" aria-label="Botão para explorar o site">Explorar</button>
   </header>
+
   <main>
-    <section class="painel campo" aria-label="Saberes do Campo">
-      <h2>Saberes do Campo</h2>
-      <div class="svg-container" role="img" aria-label="Desenho do campo com árvore, casa e animais">
-        <!-- Desenho lúdico do campo -->
-        <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- Árvore -->
-          <rect x="40" y="110" width="20" height="40" fill="#6b4226" />
-          <circle cx="50" cy="90" r="30" fill="#2a9d8f" />
-          <!-- Casa -->
-          <rect x="110" y="110" width="60" height="40" fill="#f4a261" />
-          <polygon points="110,110 140,80 170,110" fill="#e76f51" />
-          <!-- Vaca -->
-          <rect x="270" y="130" width="30" height="20" fill="#f4f1de" />
-          <circle cx="280" cy="130" r="5" fill="#264653" />
-          <circle cx="300" cy="130" r="5" fill="#264653" />
-          <rect x="270" y="150" width="10" height="5" fill="#264653" />
-          <rect x="290" y="150" width="10" height="5" fill="#264653" />
-        </svg>
+    <section aria-labelledby="cultura-saberes-title">
+      <h2 id="cultura-saberes-title">Cultura e Saberes</h2>
+      <div class="painel-container">
+        <article class="painel" tabindex="0" aria-describedby="campo-desc">
+          <div class="frente">Saberes do Campo</div>
+          <div class="verso" id="campo-desc">
+            Histórias de plantio, receitas caseiras e tradições rurais.
+          </div>
+        </article>
+        <article class="painel" tabindex="0" aria-describedby="cidade-desc">
+          <div class="frente">Saberes da Cidade</div>
+          <div class="verso" id="cidade-desc">
+            Curiosidades urbanas, expressões culturais e sustentabilidade.
+          </div>
+        </article>
       </div>
-      <p class="descricao">Histórias de plantio, receitas caseiras e tradições rurais para todas as idades.</p>
     </section>
 
-    <section class="painel cidade" aria-label="Saberes da Cidade">
-      <h2>Saberes da Cidade</h2>
-      <div class="svg-container" role="img" aria-label="Desenho da cidade com prédios, carro e pessoa">
-        <!-- Desenho lúdico da cidade -->
-        <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
-          <!-- Prédios -->
-          <rect x="40" y="70" width="30" height="80" fill="#264653" />
-          <rect x="80" y="50" width="40" height="100" fill="#2a9d8f" />
-          <rect x="130" y="90" width="25" height="60" fill="#1b4965" />
-          <!-- Janelas -->
-          <rect x="45" y="80" width="5" height="10" fill="#f0f9ff" />
-          <rect x="60" y="80" width="5" height="10" fill="#f0f9ff" />
-          <rect x="85" y="60" width="5" height="10" fill="#f0f9ff" />
-          <rect x="100" y="60" width="5" height="10" fill="#f0f9ff" />
-          <rect x="135" y="100" width="5" height="10" fill="#f0f9ff" />
-          <rect x="145" y="100" width="5" height="10" fill="#f0f9ff" />
-          <!-- Carro -->
-          <rect x="210" y="130" width="50" height="20" fill="#f4a261" rx="5" ry="5"/>
-          <circle cx="225" cy="150" r="7" fill="#264653"/>
-          <circle cx="255" cy="150" r="7" fill="#264653"/>
-          <!-- Pessoa -->
-          <circle cx="290" cy="130" r="10" fill="#f0c987"/>
-          <rect x="285" y="140" width="10" height="30" fill="#264653" rx="5" ry="5"/>
-        </svg>
+    <section aria-labelledby="linha-tempo-title">
+      <h2 id="linha-tempo-title">Linha do Tempo Interativa</h2>
+      <div class="linha-tempo" role="list">
+        <div class="marco" role="listitem" tabindex="0" aria-label="Marco histórico: 1920 - Crescimento rural">1920<br/> Crescimento rural</div>
+        <div class="marco" role="listitem" tabindex="0" aria-label="Marco histórico: 1950 - Urbanização crescente">1950<br/> Urbanização crescente</div>
+        <div class="marco" role="listitem" tabindex="0" aria-label="Marco histórico: 1980 - Conexão campo-cidade">1980<br/> Conexão campo-cidade</div>
+        <div class="marco" role="listitem" tabindex="0" aria-label="Marco histórico: 2020 - Sustentabilidade em foco">2020<br/> Sustentabilidade em foco</div>
       </div>
-      <p class="descricao">Curiosidades urbanas, expressões culturais e sustentabilidade para todas as idades.</p>
+    </section>
+
+    <section aria-labelledby="dicas-title">
+      <h2 id="dicas-title">Dicas Sustentáveis</h2>
+      <ul class="dicas-lista">
+        <li class="dica"><span class="dica-icon" aria-hidden="true"></span>Economize água na irrigação.</li>
+        <li class="dica"><span class="dica-icon" aria-hidden="true"></span>Use energia solar sempre que possível.</li>
+        <li class="dica"><span class="dica-icon" aria-hidden="true"></span>Recicle resíduos orgânicos para adubo.</li>
+        <li class="dica"><span class="dica-icon" aria-hidden="true"></span>Prefira alimentos locais e sazonais.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contato-title">
+      <h2 id="contato-title">Contato e Contribuição</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required aria-required="true" />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-required="true" />
+
+        <label for="ideia">Conte sua ideia ou história:</label>
+        <textarea id="ideia" name="ideia" rows="4" placeholder="Compartilhe conosco..." required aria-required="true"></textarea>
+
+        <button type="submit" aria-label="Enviar formulário de contribuição">Enviar</button>
+      </form>
     </section>
   </main>
 </body>
-  </html>
+          </html>
